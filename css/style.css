@@ -47,13 +47,14 @@ body{
     left: 50%;
     /* this will translate the box into of its own length and width,  */
     transform: translate(-50%, -50%);
-    
+    text-align: center;     /*As btn is there in inline-block so it is treated as a normal text so this will centr it*/
 }
 
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden; /*this defines that back element is hidden when there is animation on there child*/
+    margin-bottom: 60px ;
 }
 .heading-primary-main{
     display: block;         /* for break line*/
@@ -106,4 +107,28 @@ body{
         opacity: 1;
         transform: translateX(0)
     }
+}
+
+
+.btn:link,
+.btn:visited{               /*orugnal */
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;       /*THIS IS ALSO USED for animation*/
+}
+.btn:hover{                    /*when hover*/
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0 , 0, 0.2);      /* x y blurr color */
+}
+.btn:active{                  /*clicked*/
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px;      /* x y blurr color*/
+
+}
+.btn-white{
+    background: #fff;
+    color: #777;
 }
