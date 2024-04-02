@@ -39,3 +39,31 @@ body{
 .logo{
     height: 35px;
 }
+
+.text-box{
+    /* centering the whole hadding */
+    position: absolute;
+    top: 40%;     
+    left: 50%;
+    /* this will translate the box into of its own length and width,  */
+    transform: translate(-50%, -50%);
+    
+}
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+
+}
+.heading-primary-main{
+    display: block;         /* for break line*/
+    font-size: 60px;             
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;             
+    font-weight: 700;
+    letter-spacing: 17.4px;
+}
