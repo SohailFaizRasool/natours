@@ -1,0 +1,33 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 16px;
+    line-height: 1.7;  
+    color: #777;
+    padding: 30px;
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom ,#7ed56fd2,#28b485cc )  , url(../img/hero.jpg) ; /*two imges, and gradient is on top  img below */
+    background-size: cover;       /* what is the width of bg always try to fit in that*/
+    background-position: top;   /*Background img from top always remain same if we resiz   || bottom, center    see in dev tools by changing values*/
+
+    /* This is used for curve live in header 75vh is given for responsivity */
+    clip-path: polygon( 0 0, 100% 0, 100% 75vh , 0 100%);
+}
