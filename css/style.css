@@ -53,17 +53,57 @@ body{
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
-
+    backface-visibility: hidden; /*this defines that back element is hidden when there is animation on there child*/
 }
 .heading-primary-main{
     display: block;         /* for break line*/
     font-size: 60px;             
     font-weight: 400;
     letter-spacing: 35px;
+
+    /* animation */
+    animation-name:moveInLeft ;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* 
+    animation-delay :3s;
+    animation-iteration-count:3;
+    */
 }
 .heading-primary-sub{
     display: block;
     font-size: 20px;             
     font-weight: 700;
     letter-spacing: 17.4px;
+
+    /* Animation */
+    animation: moveInRight 1s ease-out;
+}
+
+/* Animation */
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    80%{
+        transform: translateX(10px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    80%{
+        transform: translateX(-10px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
 }
