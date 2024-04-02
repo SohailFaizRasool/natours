@@ -27,7 +27,15 @@ body{
     background-image: linear-gradient(to right bottom ,#7ed56fd2,#28b485cc )  , url(../img/hero.jpg) ; /*two imges, and gradient is on top  img below */
     background-size: cover;       /* what is the width of bg always try to fit in that*/
     background-position: top;   /*Background img from top always remain same if we resiz   || bottom, center    see in dev tools by changing values*/
-
+    position: relative;         /*As it parent to logo-box so that is position relative to this*/    
     /* This is used for curve live in header 75vh is given for responsivity */
     clip-path: polygon( 0 0, 100% 0, 100% 75vh , 0 100%);
+}
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo{
+    height: 35px;
 }
