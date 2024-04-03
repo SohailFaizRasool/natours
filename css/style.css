@@ -108,6 +108,18 @@ body{
         transform: translateX(0)
     }
 }
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(30px)
+    }
+ 
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
 
 
 .btn:link,
@@ -118,6 +130,8 @@ body{
     display: inline-block;
     border-radius: 100px;
     transition: all 0.2s;       /*THIS IS ALSO USED for animation*/
+
+    position: relative;
 }
 .btn:hover{                    /*when hover*/
     transform: translateY(-3px);
@@ -131,4 +145,35 @@ body{
 .btn-white{
     background: #fff;
     color: #777;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+
+    /* This is ralative to actual btn*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* Transition is always is on initial state */
+    transition: all .4s; 
+}
+.btn-white::after{
+    background-color:#fff;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6 );          /*1.5 times of actual after sudo element*/
+    opacity: 0;
+}
+
+.btn-animated{
+    animation: moveInBottom .5s ease-out .75s;
+    /* it is used to place element initial state at the point from where animation should be starting */
+    animation-fill-mode: backwards;
 }
