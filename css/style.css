@@ -39,23 +39,23 @@ body{
 
 .header{
     height: 95vh;
-    background-image: linear-gradient(to right bottom ,#7ed56fd2,#28b485cc )  , url(../img/hero.jpg) ; /*two imges, and gradient is on top  img below */
+    background-image: linear-gradient(to right bottom ,rgba(126,213,111,0.8),rgba(40,180,131,0.8) )  , url(../img/hero.jpg) ; /*two imges, and gradient is on top  img below */
     background-size: cover;       /* what is the width of bg always try to fit in that*/
     background-position: top;   /*Background img from top always remain same if we resiz   || bottom, center    see in dev tools by changing values*/
     position: relative;         /*As it parent to logo-box so that is position relative to this*/    
     /* This is used for curve live in header 75vh is given for responsivity */
     clip-path: polygon( 0 0, 100% 0, 100% 75vh , 0 100%);
 }
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
-.logo{
+.header__logo{
     height: 3.5rem;
 }
 
-.text-box{
+.header__text-box{
     /* centering the whole hadding */
     position: absolute;
     top: 40%;     
@@ -71,7 +71,7 @@ body{
     backface-visibility: hidden; /*this defines that back element is hidden when there is animation on there child*/
     margin-bottom: 6rem ;
 }
-.heading-primary-main{
+.heading-primary--main{
     display: block;         /* for break line*/
     font-size: 6rem;             
     font-weight: 400;
@@ -86,7 +86,7 @@ body{
     animation-iteration-count:3;
     */
 }
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 2rem;             
     font-weight: 700;
@@ -157,7 +157,7 @@ body{
     box-shadow: 0 .5rem 2rem;      /* x y blurr color*/
 
 }
-.btn-white{
+.btn--white{
     background: #fff;
     color: #777;
 }
@@ -178,7 +178,7 @@ body{
     /* Transition is always is on initial state */
     transition: all .4s; 
 }
-.btn-white::after{
+.btn--white::after{
     background-color:#fff;
 }
 
@@ -187,7 +187,7 @@ body{
     opacity: 0;
 }
 
-.btn-animated{
+.btn--animated{
     animation: moveInBottom .5s ease-out .75s;
     /* it is used to place element initial state at the point from where animation should be starting */
     animation-fill-mode: backwards;
