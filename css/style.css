@@ -7,10 +7,12 @@ Dark green: #28b485
 
 */
 
-*{
+*,
+*::after,
+*::after{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 /* Converting all font sizes in rem TRICK */
 html{
@@ -31,6 +33,8 @@ body{
     line-height: 1.7;  
     color: #777;
     padding: 3rem;
+    box-sizing: border-box;
+
 }
 
 .header{
