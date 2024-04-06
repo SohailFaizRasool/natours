@@ -38,24 +38,21 @@ body {
   /*As it parent to logo-box so that is position relative to this*/
   /* This is used for curve live in header 75vh is given for responsivity */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  /* centering the whole hadding */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  /* this will translate the box into of its own length and width,  */
-  transform: translate(-50%, -50%);
-  text-align: center;
-  /*As btn is there in inline-block so it is treated as a normal text so this will centr it*/ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    /* centering the whole hadding */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* this will translate the box into of its own length and width,  */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*As& is there in inline-block so it is treated as a normal text so this will centr it*/ }
 
 .heading-primary {
   color: #fff;
@@ -63,29 +60,27 @@ body {
   backface-visibility: hidden;
   /*this defines that back element is hidden when there is animation on there child*/
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  /* for break line*/
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  /* animation */
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* 
-    animation-delay :3s;
-    animation-iteration-count:3;
-    */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-  /* Animation */
-  animation: moveInRight 1s ease-out; }
+  .heading-primary--main {
+    display: block;
+    /* for break line*/
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /* animation */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* 
+        animation-delay :3s;
+        animation-iteration-count:3;
+        */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    /* Animation */
+    animation: moveInRight 1s ease-out; }
 
 /* Animation */
 @keyframes moveInLeft {
@@ -116,8 +111,7 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   /*orugnal */
   text-transform: uppercase;
   text-decoration: none;
@@ -133,6 +127,10 @@ body {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   /* x y blurr color */ }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    /*1.5 times of actual after sudo element*/
+    opacity: 0; }
 
 .btn:active {
   /*clicked*/
@@ -143,6 +141,8 @@ body {
 .btn--white {
   background: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -150,21 +150,13 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 10rem;
-  /* This is ralative to actual btn*/
+  /* This is ralative to actual&*/
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   /* Transition is always is on initial state */
   transition: all .4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  /*1.5 times of actual after sudo element*/
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
