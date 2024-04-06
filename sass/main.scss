@@ -2,6 +2,9 @@ $color-primary: #55c57a;
 $color-primary-light:#7ed56f;
 $color-primary-dark: #28b485;
 
+$color-grey-dark :#777;
+
+$color-white :#fff;
 
 *,
 *::after,
@@ -62,7 +65,7 @@ body{
 }
 
 .heading-primary{
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden; /*this defines that back element is hidden when there is animation on there child*/
     margin-bottom: 6rem ;
@@ -154,8 +157,8 @@ body{
 
 }
 .btn--white{
-    background: #fff;
-    color: #777;
+    background: $color-white;
+    color: $color-grey-dark;
 }
 
 .btn::after{
@@ -175,7 +178,7 @@ body{
     transition: all .4s; 
 }
 .btn--white::after{
-    background-color:#fff;
+    background-color:$color-white;
 }
 
 .btn:hover::after{
