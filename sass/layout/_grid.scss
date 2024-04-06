@@ -1,6 +1,5 @@
 .row{
     max-width: $grid-width; //this is standerd
-    background-color: #eee;
     margin: 0 auto;  //this is trick to center a block element inside another block element
     
     &:not(:last-child){
@@ -9,7 +8,6 @@
     @include clearfix;
 
     [class^="col-"]{
-        background-color: orangered;
         float: left;
         &:not(:last-child){
             margin-right: $gutter_horizental;
