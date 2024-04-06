@@ -1,0 +1,27 @@
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom ,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8) )  , url(../img/hero.jpg) ; /*two imges, and gradient is on top  img below */
+    background-size: cover;       /* what is the width of bg always try to fit in that*/
+    background-position: top;   /*Background img from top always remain same if we resiz   || bottom, center    see in dev tools by changing values*/
+    position: relative;         /*As it parent to logo-box so that is position relative to this*/    
+    /* This is used for curve live in header 75vh is given for responsivity */
+    clip-path: polygon( 0 0, 100% 0, 100% 75vh , 0 100%);
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo{
+        height: 3.5rem;
+    }
+
+    &__text-box{
+        /* centering the whole hadding */
+        position: absolute;
+        top: 40%;     
+        left: 50%;
+        /* this will translate the box into of its own length and width,  */
+        transform: translate(-50%, -50%);
+        text-align: center;     /*As& is there in inline-block so it is treated as a normal text so this will centr it*/
+    }
+}

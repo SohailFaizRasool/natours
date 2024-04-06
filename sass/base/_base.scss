@@ -1,0 +1,22 @@
+
+*,
+*::after,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+/* Converting all font sizes in rem TRICK */
+html{
+    /* 
+    font-size: 10px;  I selected 10px because its easy to calculate in ram for all the browser
+    but this is not good to fix root size
+    100% of root=16 = 16 px
+    but we always need here 10 px. How it should be possible
+    10/16*100= 62.5%
+    */
+    font-size: 62.5%;
+}
+body{
+    box-sizing: border-box;
+}
