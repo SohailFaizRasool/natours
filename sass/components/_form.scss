@@ -16,6 +16,7 @@
         width: 90%;
         border-bottom: 3px solid transparent;// adding because when in focus mood then 3px extra added and it little bit lower down the other things
         
+        transition: all .3;
         &:focus{
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
@@ -26,8 +27,6 @@
 
             }
         }
-
-
 
         &::-webkit-input-placeholder{
             color: $color-grey-dark-2;
@@ -51,4 +50,51 @@
         visibility: hidden;
         transform: translateY(-4rem);
     }
-}
+
+    //radio buttons
+    &__radio-group{
+        width: 49%;
+        display: inline-block;
+    
+    }
+
+    &__radio-input{
+        visibility: hidden;     
+    }
+    &__radio-label{
+        font-size: $default-fount-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 5rem;
+    }
+
+    &__radio-button{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 5px solid $color-primary;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &::after{
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transform: all .3s;
+
+        }
+    }
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+} 

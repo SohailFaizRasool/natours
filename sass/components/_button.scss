@@ -1,5 +1,6 @@
 
 .btn{
+    &,
     &:link,
     &:visited{               /*orugnal */
         text-transform: uppercase;
@@ -10,6 +11,10 @@
         transition: all 0.2s;       /*THIS IS ALSO USED for animation*/
     
         position: relative;
+
+        //changing for <button> attribute
+        border: none;
+        cursor: pointer;
     }
     &:hover{                    /*when hover*/
         transform: translateY(-.3rem);
@@ -19,7 +24,10 @@
             opacity: 0;
         }
     }
-    &:active{                  /*clicked*/
+    &:active,
+    &:focus
+    {                  /*clicked*/
+        outline: none;
         transform: translateY(-.1rem);
         box-shadow: 0 .5rem 2rem;      /* x y blurr color*/
     
